@@ -6,9 +6,10 @@ import "@thirdweb-dev/contracts/base/ERC20Base.sol";
 contract DEX is ERC20Base {
     address public token;
 
-    constructor (address _token) ERC20Base(name(), symbol()) {
+    constructor (address _token) ERC20Base(0x03a7b306587D81CA24D96c28dA743c6B3C993ba4, "Kekel", "KKL") {
         token = _token;
-    }
+}
+
 
     function getTokensInContract() public view returns (uint256) {
         return ERC20Base(token).balanceOf(address(this));
